@@ -11,7 +11,7 @@ function CenterContent({
   selectedProject,
 }) {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center">     {/*Rendering all the middle content which is in the middle of screen*/}
       {showPage ? (
         selectedProject ? (
           <div className="text-left px-6 py-10 w-full max-w-3xl">
@@ -20,7 +20,7 @@ function CenterContent({
             <p><strong>Description:</strong> {selectedProject.description}</p>
             <p><strong>Due Date:</strong> {selectedProject.dueDate}</p>
 
-            {/* ✅ Display Task List */}
+            {/* Display Task List */}
             {selectedProject.tasks && selectedProject.tasks.length > 0 && (
               <div className="mt-6">
                 <h2 className="font-bold text-lg mb-2">Tasks:</h2>
@@ -43,7 +43,7 @@ function CenterContent({
             </button>
           </div>
         ) : (
-          // 🔹 Default Image & Message When No Project is Selected
+          // Default Image & Message When No Project is Selected
           <div className="text-center py-60">
             <img
               className="w-40 sm:w-60 md:w-72 mx-auto mb-4"

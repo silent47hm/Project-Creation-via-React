@@ -56,7 +56,7 @@ function ProjectForm({
     }
   };
 
-  const handleAddOrUpdateTask = () => {
+  const handleAddOrUpdateTask = () => {                            //Editing the task Updated
     if (!taskDesc || !taskAssignee) return;
 
     if (editingTaskId) {
@@ -74,14 +74,14 @@ function ProjectForm({
         assignee: taskAssignee,
         completed: false,
       };
-      setTasks([...tasks, newTask]);
+      setTasks([...tasks, newTask]);           //Calling task and putting updated value in newtask
     }
 
     setTaskDesc("");
     setTaskAssignee("");
   };
 
-  const handleEditTask = (task) => {
+  const handleEditTask = (task) => {          
     setTaskDesc(task.description);
     setTaskAssignee(task.assignee);
     setEditingTaskId(task.id);
